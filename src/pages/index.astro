@@ -2,15 +2,15 @@
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/Section.astro'
 import Card from '../components/Card.astro'
-import ProjectCard from '../components/ProjectCard.astro'
+// import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
+// import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
 import profile from '../assets/profile.jpeg'
 
-import { getAllPosts, sortMDByDate } from '@/utils'
+// import { getAllPosts, sortMDByDate } from '@/utils'
 
 const cicd = ['GitHub Actions', 'Jenkins', 'JFrog']
 const cloud = ['AWS', 'Azure']
@@ -21,9 +21,9 @@ const programming = ['Java', 'JavaScript', 'Python']
 const scripting = ['Bash']
 const security = ['HashiCorp Vault']
 
-const MAX_POSTS = 10
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+// const MAX_POSTS = 10
+// const allPosts = await getAllPosts()
+// const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Resume' }}>
