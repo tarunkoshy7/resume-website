@@ -26,6 +26,13 @@ const security = ['HashiCorp Vault']
 // const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
+<meta name="theme-color" 
+      content="#ffffff" 
+      media="(prefers-color-scheme: light)">
+<meta name="theme-color" 
+      content="#000000" 
+      media="(prefers-color-scheme: dark)">
+
 <PageLayout meta={{ title: 'Resume' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
@@ -85,6 +92,18 @@ const security = ['HashiCorp Vault']
 				interest in DevOps and MLOps.
 			</p>
 		</Section>
+
+		<Section title='Skills'>
+			<SkillLayout title='CI/CD' skills={cicd} />
+			<SkillLayout title='Cloud' skills={cloud} />
+			<SkillLayout title='Containerization' skills={containerization} />
+			<SkillLayout title='IaC' skills={iac} />
+			<SkillLayout title='Monitoring' skills={monitoring} />
+			<SkillLayout title='Programming' skills={programming} />
+			<SkillLayout title='Scripting' skills={scripting} />
+			<SkillLayout title='Security' skills={security} />
+		</Section>
+		
 		<!-- {
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
@@ -105,70 +124,19 @@ const security = ['HashiCorp Vault']
 				subheading='Zand, Dubai, UAE (Launch of the first fully licensed digital bank in the UAE)'
 				date='Jul 2022 - Jan 2025'
 				altText='DevOps Engineer at Zand'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Managed deployments for the corporate banking portal and payment hub, providing
-						immediate support for production issues to ensure seamless operations.
-					</li>
-					<li>
-						Enhanced Grafana dashboards to support the troubleshooting and investigation of
-						production issues by adding detailed metrics and visualizations, enabling quicker
-						diagnosis and improving system reliability.
-					</li>
-					<li>
-						Collaborated with vendors to implement banking and cryptocurrency related applications
-						on Azure Kubernetes Services (AKS), using Helm to simplify deployments and manage
-						configurations.
-					</li>
-					<li>
-						Developed a load testing suite using k6 for core banking, corporate portal, and payment
-						hub APIs. Identified bottlenecks via Kiali and optimized connection pool configurations,
-						pod resources, and autoscaling policies, increasing end-to-end throughput by 300%.
-					</li>
-					<li>
-						Enhanced application security by migrating hard-coded secrets to HashiCorp Vault,
-						enabling secret rotation and secure injection into Kubernetes pods.
-					</li>
-					<li>
-						Led the migration of existing CI/CD pipelines from Jenkins to GitHub Actions, aligning
-						with updated standards and improving team efficiency by consolidating workflows within
-						GitHub.
-					</li>
-				</ul>
-			</Card>
+			/>
 			<Card
 				heading='QA Automation Engineer'
 				subheading='Zand, Dubai, UAE'
 				date='Nov 2021 - Jul 2022'
 				altText='QA Automation Engineer at Zand'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Designed and implemented an automated testing suite for the corporate banking platform
-						using Selenium (Java), integrating it into the GitHub Actions CI/CD pipeline to enhance
-						deployment reliability.
-					</li>
-					<li>
-						Developed and scheduled a daily automated API testing job using Newman, ensuring
-						consistent validation of functionality and system reliability.
-					</li>
-				</ul>
-			</Card>
+			/>
 			<Card
 				heading='Full Stack Developer (Intern)'
 				subheading='Zand, Dubai, UAE'
 				date='Jul 2021 - Nov 2021'
 				altText='QA Automation Engineer at Zand'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Contributed to the development and maintenance of the corporate banking platform using
-						Spring Boot and Vue.js. Enhanced user experience by implementing new features, resolving
-						bugs, and refactoring code to improve performance and maintainability.
-					</li>
-				</ul>
-			</Card>
+			/>
 		</Section>
 
 		<Section title='Education'>
@@ -177,21 +145,7 @@ const security = ['HashiCorp Vault']
 				subheading='University College London (UCL), UK'
 				date='Sep 2016 - Jun 2020'
 				altText='Master of Engineering at UCL'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						<b>Integrated Lane Change Prediction Model:</b> combined state-of-the-art object and lane
-						detection models with a custom LSTM to predict future vehicle bounding box locations and
-						subsequent lane changes using only dashcam footage (Distinction in Final Year Project –
-						Python)
-					</li>
-					<li>
-						<b>Finalist at the Cisco University Challenge 2019:</b> represented UCL as the lead software
-						engineer to create an android communication platform using Cisco Webex (24-hour
-						hackathon – Java)
-					</li>
-				</ul>
-			</Card>
+			/>
 		</Section>
 
 		<!-- <Section title='Projects'>
@@ -231,17 +185,6 @@ const security = ['HashiCorp Vault']
 				date='Apr 2025 - TBD'
 				altText='Certified Kubernetes Administrator (CKA)'
 			/>
-		</Section>
-
-		<Section title='Skills'>
-			<SkillLayout title='CI/CD' skills={cicd} />
-			<SkillLayout title='Cloud' skills={cloud} />
-			<SkillLayout title='Containerization' skills={containerization} />
-			<SkillLayout title='IaC' skills={iac} />
-			<SkillLayout title='Monitoring' skills={monitoring} />
-			<SkillLayout title='Programming' skills={programming} />
-			<SkillLayout title='Scripting' skills={scripting} />
-			<SkillLayout title='Security' skills={security} />
 		</Section>
 	</div>
 </PageLayout>
